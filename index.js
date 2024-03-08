@@ -3,16 +3,12 @@ const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
 
-const stylesCssPath = path.join(process.cwd(), 'styles.css');
-const packageJsonPath = path.join(process.cwd(), 'package.json');
-const imageJsPath = path.join(process.cwd(), 'image.js');
-
 const packageJsonContent = 
 `{
   "name": "my-lek-photographic-studio-project",
   "description": "lek-photographic-studio-project",
   "dependencies": {
-    "lek-photographic-studio": "^1.0.4",
+    "lek-photographic-studio": "^1.0.5",
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
@@ -64,8 +60,7 @@ const Image = _ =>
     </>
 }
 
-export { Image, settings };`
-
+export { Image, settings };`;
 
 (async () => {
   try {
@@ -73,15 +68,11 @@ export { Image, settings };`
     const packageJsonPath = path.join(process.cwd(), 'package.json');
     const imageJsPath = path.join(process.cwd(), 'image.js');
     
-    // Escribe package.json y espera a que termine
-    await fs.writeFile(packageJsonPath, packageJsonContent);
-    
-    // Ejecuta npm install de manera síncrona
-    execSync('npm install', { stdio: 'inherit' });
-    
-    // Escribe los demás archivos
     await fs.writeFile(imageJsPath, imageJsContent);
     await fs.writeFile(stylesCssPath, '');
+    await fs.writeFile(packageJsonPath, packageJsonContent);
+    
+    execSync('npm install', { stdio: 'inherit' });
     
     console.log(`
       Your "lek-photographic-studio" project has been successfully initialized.
