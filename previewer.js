@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Image, settings } from "./image";
+import { Image, settings } from "../../image";
 
 
 const screenStyleDefault =
