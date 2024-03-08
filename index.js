@@ -3,6 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+const stylesCssPath = path.join(process.cwd(), 'styles.css');
+const packageJsonPath = path.join(process.cwd(), 'package.json');
+const imageJsPath = path.join(process.cwd(), 'image.js');
 const imageJsContent =
 `import React from "react";
 import IMG from "./components/IMG";
