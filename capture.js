@@ -6,7 +6,6 @@ const path = require('path');
 const fs = require('fs-extra');
 const { JSDOM } = require('jsdom');
 const webpack = require('webpack');
-const webpackNodeExternals = require('webpack-node-externals');
 
 const capture = async () => {
   const id = 'id-' + crypto.randomBytes(64).toString('hex');
@@ -16,9 +15,9 @@ const capture = async () => {
   console.clear()
   console.log('wait please...')
   const page = await browser.newPage();
-  await webpack_compile(userPath)
+  await webpack_compile(userPath);
 
-  const { settings, Image } = require('./dist-export/bundle')
+  const { settings, Image } = require('./dist-export/bundle');
 
   const { width, height } = settings.dimensions;
   const style = { width: width + 'px', height: height + 'px' };
@@ -43,6 +42,8 @@ const capture = async () => {
   await browser.close();
   fs.emptyDirSync(path.resolve(__dirname, './dist-export'));
 };
+
+console.log(0)
 
 capture().catch(console.error);
 
@@ -82,7 +83,7 @@ const webpack_compile = userPath => {
       rules: [
         {
           test: /\.jsx?$/,
-          exclude: /node_modules/,
+          exclude: /node_modules\/(?!lek-photographic-studio\/).*/,
           use: {
             loader: 'babel-loader',
             options: {
@@ -99,8 +100,7 @@ const webpack_compile = userPath => {
           type: 'asset/resource',
         },
       ],
-    },
-    externals: [webpackNodeExternals()]
+    }
   };
 
   return new Promise((resolve, reject) => {

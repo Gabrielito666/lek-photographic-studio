@@ -8,7 +8,7 @@ const packageJsonContent =
   "name": "my-lek-photographic-studio-project",
   "description": "lek-photographic-studio-project",
   "dependencies": {
-    "lek-photographic-studio": "^1.0.7",
+    "lek-photographic-studio": "^1.0.9",
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
@@ -34,14 +34,14 @@ const packageJsonContent =
     "start:react": "node ./node_modules/lek-photographic-studio/bin/start-react.js",
     "start:electron": "node ./node_modules/lek-photographic-studio/bin/start-electron.js",
     "dev": "concurrently \\"npm run start:react\\" \\"wait-on http://localhost:8080 && npm run start:electron\\"",
-    "export": "node ./node_modules/lek-photographic-studio/bin/export.js"
+    "export": "node ./node_modules/lek-photographic-studio/capture.js"
   }
 }`;
 
 const imageJsContent =
 `import React from "react";
-import IMG from "./components/IMG";
-import styles from ".styles.css";
+import IMG from "lek-photographic-studio/components/IMG";
+import styles from "./styles.css";
 
 const settings =
 {

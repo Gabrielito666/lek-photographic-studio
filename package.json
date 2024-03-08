@@ -1,6 +1,6 @@
 {
   "name": "lek-photographic-studio",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "react photographic studio",
   "main": "index.js",
   "bin": {
@@ -24,8 +24,7 @@
     "wait-on": "^7.2.0",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.2",
-    "webpack-node-externals": "^3.0.0"
+    "webpack-dev-server": "^5.0.2"
   },
   "scripts": {
     "start:react": "webpack serve --mode development --entry ./previewer.js --no-open",
