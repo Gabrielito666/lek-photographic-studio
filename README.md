@@ -8,7 +8,13 @@ With Lek photographic studio you can edit images with a simple image.js file and
 
 ## Installation
 
-install the package with npx lek-photographic-studio and you can start working.
+install the package with:
+
+```bash
+npx lek-photographic-studio
+```
+
+and you can start working.
 
 ## Settings
 
