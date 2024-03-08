@@ -1,9 +1,11 @@
 {
   "name": "lek-photographic-studio",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "react photographic studio",
   "main": "index.js",
-  "bin" : { "lek-studio" : "./index.js" },
+  "bin" : {
+    "lek-studio" : "./index.js"
+  },
   "dependencies": {
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
