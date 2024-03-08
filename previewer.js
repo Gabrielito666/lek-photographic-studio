@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ErrorBoundary } from 'react-error-boundary';
 import { Image, settings } from "./image";
-
-const ErrorFallback = ({error}) =>
-<>
-    <h1>Error:</h1>
-    <pre>{error.message}</pre>
-</>;
 
 
 const screenStyleDefault =
@@ -43,10 +36,7 @@ const PreviewScreen = _ =>
         transform : `scale(${scale})`,
         ...screenStyleDefault
     };
-    console.log(Image)
 
-    return <ErrorBoundary FallbackComponent={ErrorFallback}>
-        view && <div style={screenStyle}><Image/></div>
-    </ErrorBoundary>;
+    return view && <div style={screenStyle}><Image/></div>
 }
 export default PreviewScreen;
