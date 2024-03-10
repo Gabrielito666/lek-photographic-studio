@@ -44,5 +44,9 @@ import MyImg from "./my_img.jpeg";
 
 when you want to export your image you only have to write in your treminal npm run export and the image will be created by default in an output file in your main folder.
 
+since version 2.0.0 an npm run get-dims <img-path> script has been added.
+
+with this script you can get the dimensions of an image in the console in a convenient way
+
 # License
 This software is licensed under the ISC License. The ISC License is a permissive free software license, allowing for freedom to use, modify, and redistribute the software, with some conditions. For the complete terms and conditions, please see the LICENSE file in the root directory of this project.
