@@ -8,14 +8,14 @@ const packageJsonContent =
   "name": "my-lek-photographic-studio-project",
   "description": "lek-photographic-studio-project",
   "dependencies": {
-    "lek-photographic-studio": "^2.0.1"
+    "lek-photographic-studio": "^2.0.2"
   },
   "scripts": {
-    "start:react": "node --no-deprecation ./node_modules/lek-photographic-studio/bin/start-react.js",
-    "start:electron": "node --no-deprecation ./node_modules/lek-photographic-studio/bin/start-electron.js",
-    "dev": "concurrently \\"npm run start:react\\" \\"wait-on http://localhost:8080 && npm run start:electron\\"",
-    "export": "node --no-deprecation ./node_modules/lek-photographic-studio/capture.js",
-    "get-dims": "node --no-deprecation ./node_modules/lek-photographic-studio/tools/copy-dimentions.js"
+    "start:react:previewer": "node ./node_modules/lek-photographic-studio/previewer/start-react.js",
+    "start:electron:previewer": "node ./node_modules/lek-photographic-studio/previewer/start-electron.js",
+    "dev": "concurrently \\"npm run start:react:previewer\\" \\"wait-on http://localhost:8080 && npm run start:electron:previewer\\"",
+    "export": "node ./node_modules/lek-photographic-studio/export/capture.js",
+    "get-dims": "node ./node_modules/lek-photographic-studio/tools/copy-dimentions.js"
   }
 }`;
 
@@ -52,7 +52,7 @@ const stylesCssContent =
     await fs.writeFile(packageJsonPath, packageJsonContent);
     
     execSync('npm install', { stdio: 'inherit' });
-    
+        
     console.log(`
       Your "lek-photographic-studio" project has been successfully initialized.
       
