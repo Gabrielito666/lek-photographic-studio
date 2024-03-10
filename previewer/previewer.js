@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "../../image";
+import React, { useState, useEffect } from "react";
+import Image from "../../../image";
 const PreviewScreen = () => {
     const [ scale, setScale ] = useState(1);
     const [ view, setView ] = useState(false);

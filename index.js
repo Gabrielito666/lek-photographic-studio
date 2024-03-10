@@ -8,7 +8,7 @@ const packageJsonContent =
   "name": "my-lek-photographic-studio-project",
   "description": "lek-photographic-studio-project",
   "dependencies": {
-    "lek-photographic-studio": "^2.0.2"
+    "lek-photographic-studio": "^2.0.3"
   },
   "scripts": {
     "start:react:previewer": "node ./node_modules/lek-photographic-studio/previewer/start-react.js",
@@ -36,9 +36,9 @@ export default Image;`;
 
 const stylesCssContent =
 `.lek-photographic-studio-screen{
-  overflow: 'hidden';
-  border: 'solid black 3px';
-  position: 'absolute';
+  overflow: hidden;
+  border: solid black 3px;
+  position: absolute;
 }`;
 
 (async () => {
