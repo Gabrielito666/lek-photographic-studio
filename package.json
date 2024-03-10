@@ -1,6 +1,6 @@
 {
   "name": "lek-photographic-studio",
-  "version": "1.0.10",
+  "version": "2.0.0",
   "description": "react photographic studio",
   "main": "index.js",
   "bin": {
@@ -33,5 +33,9 @@
     "dev": "concurrently \"npm run start:react\" \"wait-on http://localhost:8080 && npm run start:electron\"",
     "export": "node --no-deprecation ./capture.js",
     "get-dims": "node --no-deprecation ./tools/copy-dimentions.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabrielito666/lek-photographic-studio"
   }
 }
