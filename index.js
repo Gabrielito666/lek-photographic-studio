@@ -8,8 +8,7 @@ const packageJsonContent =
   "name": "my-lek-photographic-studio-project",
   "description": "lek-photographic-studio-project",
   "dependencies": {
-    "lek-photographic-studio": "^2.0.0",
-    "puppeteer": "^22.4.0",
+    "lek-photographic-studio": "^2.0.1"
   },
   "scripts": {
     "start:react": "node --no-deprecation ./node_modules/lek-photographic-studio/bin/start-react.js",
