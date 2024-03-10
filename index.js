@@ -8,7 +8,7 @@ const packageJsonContent =
   "name": "my-lek-photographic-studio-project",
   "description": "lek-photographic-studio-project",
   "dependencies": {
-    "lek-photographic-studio": "^2.0.3"
+    "lek-photographic-studio": "^2.0.4"
   },
   "scripts": {
     "start:react:previewer": "node ./node_modules/lek-photographic-studio/previewer/start-react.js",

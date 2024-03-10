@@ -27,7 +27,7 @@ const PreviewScreen = () => {
         transform : `scale(${scale})`,
     };
 
-    return view ? <div className={ className } styles = { screenStyle }>{ children }</div> : null;
+    return view ? <div className={ className } style = { screenStyle }>{ children }</div> : null;
 };
 export default PreviewScreen;
 
