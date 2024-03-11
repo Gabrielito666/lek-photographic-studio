@@ -8,7 +8,7 @@ const packageJsonContent =
   "name": "my-lek-photographic-studio-project",
   "description": "lek-photographic-studio-project",
   "dependencies": {
-    "lek-photographic-studio": "^2.0.6"
+    "lek-photographic-studio": "^2.0.7"
   },
   "scripts": {
     "start:react:previewer": "node ./node_modules/lek-photographic-studio/previewer/start-react.js",
@@ -27,7 +27,7 @@ import "./styles.css";
 
 const Image = _ =>
 {
-  return <Screen className="lek-photographic-studio-screen" width={1000} height={1000} exports="./my_imege.png">
+  return <Screen className="lek-photographic-studio-screen" width={1000} height={1000} exports="./my_image.png">
     <h1>Edit here your image</h1>
   </Screen>;
 };

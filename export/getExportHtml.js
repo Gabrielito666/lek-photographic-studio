@@ -6,6 +6,7 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackConfig = require('lek-photographic-studio/export/webpack-export-config');
 const userPath = path.resolve(process.cwd(), './image.js');
+const htmlImagesToBase64 = require('./imagesToBase64'); 
 
 const getExportHtml = async () =>
 {
@@ -24,8 +25,8 @@ const getExportHtml = async () =>
     React.createElement('style', null, stringStyle),
     React.createElement('div', { className, style, id }, children)
   );
-  const html = ReactDOMServer.renderToStaticMarkup(Component());
-  console.log(html)
+  const htmlPure = ReactDOMServer.renderToStaticMarkup(Component());
+  const html = await htmlImagesToBase64(htmlPure);
   return { html, exports, id };
 };
 
@@ -42,3 +43,5 @@ const webpack_compile = _ => new Promise((resolve, reject) =>
 });
 
 module.exports = getExportHtml;
+
+
