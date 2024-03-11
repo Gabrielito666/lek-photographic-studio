@@ -7,7 +7,6 @@ const path = require('path');
   const output = exports ? path.resolve(process.cwd(), exports) : path.resolve(process.cwd(), './output.png');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-
   await page.setContent(html);
   await page.waitForSelector(`#${id}`);
   const div = await page.$(`#${id}`);

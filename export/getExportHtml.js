@@ -6,7 +6,7 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackConfig = require('lek-photographic-studio/export/webpack-export-config');
 const userPath = path.resolve(process.cwd(), './image.js');
-const htmlImagesToBase64 = require('./imagesToBase64'); 
+const htmlImagesToBase64 = require('./htmlImagesToBase64'); 
 
 const getExportHtml = async () =>
 {
